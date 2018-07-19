@@ -1,9 +1,5 @@
 services:
 
-    bywulf_user_form_type_user_profile:
-        class: Bywulf\UserBundle\Form\Type\UserProfileType
-        tags: ['form.type']
-
     bywulf_user_form_type_user:
         class: Bywulf\UserBundle\Form\Type\UserType
         tags: ['form.type']

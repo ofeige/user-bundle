@@ -49,12 +49,6 @@ class User implements UserInterface, \Serializable
     private $email;
 
     /**
-     * @ORM\OneToOne(targetEntity="Bywulf\UserBundle\Entity\UserProfile", mappedBy="user")
-     * @ORM\JoinColumn(name="user_profile_id", referencedColumnName="id", onDelete="CASCADE")
-     */
-    private $userProfile;
-
-    /**
      * @ORM\Column(type="json")
      */
     private $roles = ['ROLE_USER'];
@@ -191,22 +185,6 @@ class User implements UserInterface, \Serializable
             // see section on salt below
             // $this->salt
             ) = unserialize($serialized);
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getUserProfile()
-    {
-        return $this->userProfile;
-    }
-
-    /**
-     * @param mixed $userProfile
-     */
-    public function setUserProfile($userProfile): void
-    {
-        $this->userProfile = $userProfile;
     }
 
 }
