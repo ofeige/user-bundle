@@ -10,3 +10,8 @@ services:
 
     bywulf_user_security_user_checker:
         class: Bywulf\UserBundle\Security\UserChecker
+
+    Bywulf\UserBundle\Controller\:
+        resource: '../../Controller/'
+        autowire: true
+        tags: ['controller.service_arguments']

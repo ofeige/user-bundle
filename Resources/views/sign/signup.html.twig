@@ -48,7 +48,7 @@
                         <small class="form-text text-muted">
                             <label class="  text-black-50">
                                 <input type="checkbox" name="terms" checked>
-                                I accept the <a href="{{ path('terms') }}">Terms and Conditions</a>
+                                I accept the <a href="{{ path('bywulf_user_terms') }}">Terms and Conditions</a>
                             </label>
                         </small>
                     </div>
@@ -56,7 +56,7 @@
                 <div class="border border-primary rounded-bottom p-4 text-center">
                     <button class="btn btn-md btn-block btn-primary" type="submit">Signup</button>
                     <small class="form-text text-muted text-black-50 pt-4">Already have an account? <a
-                                href="{{ path('login') }}">sign-in</a>
+                                href="{{ path('bywulf_user_login') }}">sign-in</a>
                     </small>
                 </div>
                 {{ form_end(form) }}

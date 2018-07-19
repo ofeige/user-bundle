@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Controller;
+namespace Bywulf\UserBundle\Controller;
 
 use Bywulf\UserBundle\Entity\UserProfile;
 use Bywulf\UserBundle\Form\Type\UserProfileType;
@@ -39,7 +39,7 @@ class Profile extends Controller
             $em->flush();
         }
 
-        return $this->render('User/profile/index.html.twig', [
+        return $this->render('@BywulfUser/profile/index.html.twig', [
             'form' => $form->createView(),
             'username' => $this->getUser()->getUsername(),
         ]);

@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Controller;
+namespace Bywulf\UserBundle\Controller;
 
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
@@ -30,7 +30,7 @@ class Sign extends Controller
         // last username entered by the user
         $lastUsername = $authUtils->getLastUsername();
 
-        return $this->render('User/sign/signin.html.twig', array(
+        return $this->render('@BywulfUser/sign/signin.html.twig', array(
             'last_username' => $lastUsername,
             'error'         => $error
         ));
@@ -65,11 +65,11 @@ class Sign extends Controller
             // ... do any other work - like sending them an email, etc
             // maybe set a "flash" success message for the user
 
-            return $this->redirectToRoute('user_registration_successful');
+            return $this->redirectToRoute('bywulf_user_registration_successful');
         }
 
         return $this->render(
-            'User/sign/signup.html.twig',
+            '@BywulfUser/sign/signup.html.twig',
             array('form' => $form->createView())
         );
     }
@@ -81,16 +81,16 @@ class Sign extends Controller
      */
     public function registerSuccessfulAction()
     {
-        return $this->render('User/sign/signup_successful.html.twig');
+        return $this->render('@BywulfUser/sign/signup_successful.html.twig');
     }
 
     /**
-     * @Route("/user/forgotpw", name="bywulf_user_forgot_password"
+     * @Route("/user/forgotpw", name="bywulf_user_forgot_password")
      *
      * @return Response
      */
     public function forgotPassword()
     {
-        return $this->render('User/sign/forgot_password.html.twig');
+        return $this->render('@BywulfUser/sign/forgot_password.html.twig');
     }
 }

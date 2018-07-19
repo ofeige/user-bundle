@@ -49,7 +49,7 @@ class User implements UserInterface, \Serializable
     private $email;
 
     /**
-     * @ORM\OneToOne(targetEntity="App\Entity\UserProfile", mappedBy="user")
+     * @ORM\OneToOne(targetEntity="Bywulf\UserBundle\Entity\UserProfile", mappedBy="user")
      * @ORM\JoinColumn(name="user_profile_id", referencedColumnName="id", onDelete="CASCADE")
      */
     private $userProfile;

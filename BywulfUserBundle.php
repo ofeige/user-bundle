@@ -2,7 +2,7 @@
 
 namespace Bywulf\UserBundle;
 
-use ByWulf\UserBundle\DependencyInjection\BywulfUserExtension;
+use Bywulf\UserBundle\DependencyInjection\BywulfUserExtension;
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
 class BywulfUserBundle extends Bundle
