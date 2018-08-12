@@ -10,13 +10,12 @@ use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 
 
 /**
- * @ORM\Table(name="user")
- * @ORM\Entity
+ * @ORM\MappedSuperclass
  * @UniqueEntity("email")
  * @UniqueEntity("username")
  */
 
-class User implements UserInterface, \Serializable
+abstract class User implements UserInterface, \Serializable
 {
     /**
      * @ORM\Column(type="integer")
